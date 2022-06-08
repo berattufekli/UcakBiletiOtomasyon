@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="700.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="700.0" prefWidth="800.0" styleClass="main-panel" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KoltukSecmeController">
+   <children>
+      <BorderPane layoutX="255.0" layoutY="197.0" prefHeight="700.0" prefWidth="800.0" styleClass="main-panel" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="28.0" prefWidth="780.0" styleClass="upside-panel" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="close_btn" layoutX="746.0" layoutY="-2.0" mnemonicParsing="false" onAction="#close_btnClick" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minimize_btn" layoutX="714.0" layoutY="-2.0" mnemonicParsing="false" onAction="#minimize_btnClick" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="598.0" prefWidth="800.0" styleClass="upside-panel" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <TabPane layoutX="50.0" layoutY="26.0" prefHeight="500.0" prefWidth="680.0" styleClass="text-field" stylesheets="@application.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabPage1" text="Gidiş Koltuğu Seç">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="90.0" layoutY="82.0" prefHeight="350.0" prefWidth="500.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="968.0" prefWidth="484.0" styleClass="main-panel" stylesheets="@application.css">
+                                             <children>
+                                                <BorderPane layoutY="7.0" prefHeight="968.0" prefWidth="484.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <top>
+                                                      <HBox fx:id="harflerHBox" prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <BorderPane.margin>
+                                                            <Insets left="70.0" />
+                                                         </BorderPane.margin>
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="A">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="B">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="C">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="D">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </top>
+                                                   <left>
+                                                      <VBox fx:id="GidisSayilarVBox" prefHeight="200.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <center>
+                                                      <VBox fx:id="GidisKoltuklarVBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                    <Label fx:id="lbl1_ucus" alignment="CENTER" layoutX="90.0" layoutY="9.0" prefHeight="30.0" prefWidth="500.0" text="Gidiş İçin Lütfen Koltuk Seçiniz">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl1_ucus1" alignment="CENTER" layoutX="90.0" layoutY="39.0" prefHeight="30.0" prefWidth="500.0" text="Uçuşunuz için koltuk seçiniz.">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_koltuklar1" alignment="CENTER" layoutX="90.0" layoutY="437.0" prefHeight="30.0" prefWidth="500.0" text="Seçilen Koltuklar: ">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabPage2" text="Dönüş Koltuğunu Seç">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="90.0" layoutY="82.0" prefHeight="350.0" prefWidth="500.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="968.0" prefWidth="484.0" styleClass="main-panel" stylesheets="@application.css">
+                                             <children>
+                                                <BorderPane layoutY="7.0" prefHeight="968.0" prefWidth="484.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <top>
+                                                      <HBox fx:id="harflerHBox1" prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <BorderPane.margin>
+                                                            <Insets left="70.0" />
+                                                         </BorderPane.margin>
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="A">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="B">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="C">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" prefHeight="70.0" prefWidth="70.0" text="D">
+                                                               <font>
+                                                                  <Font name="Noto Sans Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </top>
+                                                   <left>
+                                                      <VBox fx:id="DonusSayilarVBox" prefHeight="200.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <center>
+                                                      <VBox fx:id="DonusKoltuklarVBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                    <Label fx:id="lbl2_ucus" alignment="CENTER" layoutX="90.0" layoutY="9.0" prefHeight="30.0" prefWidth="500.0" text="Gidiş İçin Lütfen Koltuk Seçiniz">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl2_ucus1" alignment="CENTER" layoutX="90.0" layoutY="39.0" prefHeight="30.0" prefWidth="500.0" text="Uçuşunuz için koltuk seçiniz.">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_koltuklar2" alignment="CENTER" layoutX="90.0" layoutY="437.0" prefHeight="30.0" prefWidth="500.0" text="Seçilen Koltuklar: ">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <HBox prefHeight="80.0" prefWidth="780.0" styleClass="upside-panel" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="390.0">
+                     <children>
+                        <Button fx:id="btn_reset" layoutX="70.0" layoutY="17.0" mnemonicParsing="false" onAction="#btn_reset_click" prefHeight="47.0" prefWidth="250.0" styleClass="reset-selection" stylesheets="@application.css" text="Seçilen Koltukları Sıfırla">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="82.0" prefWidth="390.0">
+                     <children>
+                        <Button fx:id="btn_pay" contentDisplay="RIGHT" layoutX="70.0" layoutY="17.0" mnemonicParsing="false" onAction="#btn_pay_click" prefHeight="47.0" prefWidth="250.0" styleClass="choose-seat-button" stylesheets="@application.css" text="Ödeme Ekranına Geç">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/right-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

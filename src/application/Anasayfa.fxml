@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_panel_anchor_pane" prefHeight="800.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnasayfaController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="labelPanel" layoutY="219.0" opacity="0.0" prefHeight="40.0" prefWidth="750.0" styleClass="upside-panel" stylesheets="@application.css">
+               <children>
+                  <Pane fx:id="inside_panel" prefHeight="40.0" prefWidth="750.0">
+                     <children>
+                        <Label fx:id="lbl_gidis" alignment="CENTER" layoutX="70.0" layoutY="5.0" prefHeight="30.0" prefWidth="250.0" text="Gidiş Seferleri">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_donus" alignment="CENTER" layoutX="428.0" layoutY="5.0" prefHeight="30.0" prefWidth="250.0" text="Dönüş Seferleri" textFill="#090909">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="parent_panel" layoutY="14.0" prefHeight="200.0" prefWidth="750.0" styleClass="upside-panel" stylesheets="@application.css">
+               <children>
+                  <Pane fx:id="child_panel" prefHeight="200.0" prefWidth="750.0">
+                     <children>
+                        <RadioButton fx:id="tekYon" alignment="CENTER_RIGHT" depthTest="DISABLE" graphicTextGap="3.0" layoutX="73.0" layoutY="14.0" mnemonicParsing="false" onAction="#YonClick" prefHeight="22.0" prefWidth="96.0" text="Tek Yön" textAlignment="JUSTIFY" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="gidisDonus" alignment="CENTER_RIGHT" depthTest="DISABLE" layoutX="190.0" layoutY="14.0" mnemonicParsing="false" onAction="#YonClick" prefHeight="20.0" prefWidth="130.0" text="Gidiş - Dönüş" textAlignment="JUSTIFY" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="73.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/take_off.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="107.0" layoutY="45.0" prefHeight="30.0" prefWidth="100.0" text="Nereden:" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="close_btn" layoutX="711.0" layoutY="3.0" mnemonicParsing="false" onAction="#close_btnClick" prefHeight="32.0" prefWidth="11.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="minimize_btn" layoutX="681.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize_btnClick" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/minimize.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="73.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/take_on.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="107.0" layoutY="114.0" prefHeight="30.0" prefWidth="100.0" text="Nereye:" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datetime_gidis" layoutX="345.0" layoutY="76.0" prefHeight="37.0" prefWidth="150.0" styleClass="custom-datepicker" stylesheets="@application.css" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="348.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/date.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="348.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/peoples.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="382.0" layoutY="114.0" prefHeight="30.0" prefWidth="80.0" text="Yolcular" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_ara" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="530.0" layoutY="146.0" mnemonicParsing="false" onAction="#btn_ara_click" prefHeight="35.0" prefWidth="150.0" styleClass="custom-search-button" stylesheets="@application.css" text="Ara" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons8-search-20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Spinner fx:id="yolcular" layoutX="345.0" layoutY="146.0" prefHeight="35.0" prefWidth="150.0" styleClass="custom-spinner" stylesheets="@application.css" />
+                        <Label layoutX="570.0" layoutY="45.0" prefHeight="30.0" prefWidth="80.0" text="Dönüş" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datetime_donus" layoutX="530.0" layoutY="77.0" prefHeight="35.0" prefWidth="150.0" styleClass="custom-datepicker" stylesheets="@application.css" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="530.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/date.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="382.0" layoutY="45.0" prefHeight="30.0" prefWidth="80.0" text="Gidiş" textFill="#a6abb7">
+                           <font>
+                              <Font name="Noto Sans Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="combo_nereden" layoutX="70.0" layoutY="76.0" prefHeight="35.0" prefWidth="250.0" styleClass="custom-combobox" stylesheets="@application.css" visibleRowCount="5" />
+                        <ComboBox fx:id="combo_nereye" layoutX="70.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0" styleClass="custom-combobox" stylesheets="@application.css" visibleRowCount="5" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <VBox fx:id="flightsVBox" layoutY="264.0" prefHeight="526.0" prefWidth="750.0">
+               <children>
+                  <Pane fx:id="firstrow" opacity="0.0" prefHeight="110.0" prefWidth="759.0" styleClass="upside-panel" stylesheets="@application.css">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Pane fx:id="inside_panel1" layoutX="70.0" prefHeight="111.0" prefWidth="607.0">
+                           <children>
+                              <Pane fx:id="gidis1panel" layoutY="11.0" onMouseClicked="#gidis1click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis1nereden" alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="124.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis1nereye" alignment="CENTER" layoutX="150.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="4.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis1saat" alignment="CENTER" layoutX="25.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="09:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="124.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis1ucret" alignment="CENTER" layoutX="150.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane fx:id="donus1panel" layoutX="356.0" layoutY="11.0" onMouseClicked="#donus1click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus1nereden" alignment="CENTER" layoutX="23.0" layoutY="16.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus1nereye" alignment="CENTER" layoutX="148.0" layoutY="16.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus1saat" alignment="CENTER" layoutX="23.0" layoutY="56.0" prefHeight="22.0" prefWidth="100.0" text="09:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus1ucret" alignment="CENTER" layoutX="148.0" layoutY="56.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="secondrow" opacity="0.0" prefHeight="110.0" prefWidth="759.0" styleClass="upside-panel" stylesheets="@application.css">
+                     <children>
+                        <Pane fx:id="inside_panel2" layoutX="70.0" prefHeight="111.0" prefWidth="607.0">
+                           <children>
+                              <Pane fx:id="gidis2panel" layoutY="11.0" onMouseClicked="#gidis2click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis2nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis2nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis2saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="12:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis2ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane fx:id="donus2panel" layoutX="356.0" layoutY="11.0" onMouseClicked="#donus2click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus2nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus2nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus2saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="12:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus2ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="thirdrow" opacity="0.0" prefHeight="110.0" prefWidth="759.0" styleClass="upside-panel" stylesheets="@application.css">
+                     <children>
+                        <Pane fx:id="inside_panel3" layoutX="70.0" prefHeight="111.0" prefWidth="607.0">
+                           <children>
+                              <Pane fx:id="gidis3panel" layoutY="11.0" onMouseClicked="#gidis3click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis3nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis3nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis3saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="15:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis3ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane fx:id="donus3panel" layoutX="356.0" layoutY="11.0" onMouseClicked="#donus3click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus3nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus3nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus3saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="15:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus3ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="fourthrow" opacity="0.0" prefHeight="110.0" prefWidth="759.0" styleClass="upside-panel" stylesheets="@application.css">
+                     <children>
+                        <Pane fx:id="inside_panel4" layoutX="70.0" prefHeight="111.0" prefWidth="607.0">
+                           <children>
+                              <Pane fx:id="gidis4panel" layoutY="11.0" onMouseClicked="#gidis4click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis4nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis4nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis4saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="18:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="gidis4ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane fx:id="donus4panel" layoutX="356.0" layoutY="11.0" onMouseClicked="#donus4click" prefHeight="90.0" prefWidth="250.0" styleClass="ucus-button" stylesheets="@application.css">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-off-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus4nereden" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="İstanbul">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/take-on-white.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus4nereye" alignment="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" text="Adana">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="2.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-timer-20.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus4saat" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="18:00">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="122.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="donus4ucret" alignment="CENTER" layoutX="148.0" layoutY="54.0" prefHeight="22.0" prefWidth="100.0" text="120₺">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="fifthrow" opacity="0.0" prefHeight="65.0" prefWidth="750.0" styleClass="upside-panel">
+                     <children>
+                        <Pane fx:id="inside_panel5" prefHeight="65.0" prefWidth="750.0">
+                           <children>
+                              <Button fx:id="btn_koltuksec" contentDisplay="RIGHT" layoutX="428.0" layoutY="9.0" mnemonicParsing="false" onAction="#btn_koltuksec_click" prefHeight="47.0" prefWidth="250.0" styleClass="choose-seat-button" stylesheets="@application.css" text="Koltuk Seçimine Geç">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/right-arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_reset" layoutX="70.0" layoutY="9.0" mnemonicParsing="false" onAction="#btn_reset_click" prefHeight="47.0" prefWidth="250.0" styleClass="reset-selection" stylesheets="@application.css" text="Seçilenleri Sıfırla">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
