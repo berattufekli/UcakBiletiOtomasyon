@@ -1,0 +1,267 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.main-panel{
+	-fx-background-color: #F5F8FE;
+	-fx-background-radius: 20px;
+}
+
+.custom-button{
+	-fx-background-color: #397BDD;
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 18px;
+	-fx-font-weight: bold;
+}
+
+.left-panel{
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 12px;
+}
+
+.upside-panel{
+	-fx-background-color: white;
+	-fx-background-radius: 12px;
+}
+
+/*Custom Radio CSS*/
+.radio-button .radio{
+	-fx-background-color: white;
+	-fx-border-width: 3px;
+	-fx-border-color: #AECAF0;
+	-fx-border-radius: 15px;
+	-fx-padding: 3px;
+}
+
+.radio-button .radio:selected{
+	-fx-background-color : white ;
+	-fx-background-image : null  ;
+	-fx-border-color: black;
+}
+
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 2px;
+}
+
+
+
+/* Custom TextField CSS*/
+.custom-textfield{
+	-fx-background-color: transparent;
+	-fx-border-color: #AECAF0;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+
+}
+
+.custom-textfield:focused {
+    -fx-border-color: #397BDD;
+}
+
+/*Custom Search Button CSS*/
+.custom-search-button{
+	-fx-background-color: #1E3067;
+	-fx-background-radius: 8px;
+}
+
+/* Custom DatePicker CSS*/
+.custom-datepicker{
+	-fx-background-color: transparent;
+	-fx-border-color: #AECAF0;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+}
+
+.custom-datepicker:focused {
+    -fx-border-color: #397BDD;
+}
+
+.custom-datepicker .text-field{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+	-fx-text-fill: #a6abb7;
+}
+
+
+.custom-datepicker:focused .text-field{
+    -fx-text-fill: black;
+}
+
+
+
+/*Custom Spinner CSS*/
+.custom-spinner{
+	-fx-background-color: transparent;
+	-fx-border-color: #AECAF0;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+}
+
+.custom-spinner:focused {
+    -fx-border-color: #397BDD;
+}
+
+.custom-spinner:focused .text-field{
+    -fx-text-fill: black;
+}
+
+.custom-spinner .text-field{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+	-fx-text-fill: #a6abb7;
+}
+
+/*Custom Days Button*/
+.custom-days-button{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 8px;
+}
+
+.custom-days-button-selected{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+	-fx-background-color: #1E3067;
+	-fx-background-radius: 8px;
+}
+
+/*Custom ComboBox*/
+.custom-combobox{
+	-fx-background-color: transparent;
+	-fx-border-color: #AECAF0;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+	-fx-text-fill: #a6abb7;
+}
+
+.custom-combobox:focused {
+    -fx-border-color: #397BDD;
+	-fx-text-fill: black;
+}
+
+/* uçus seferleri button */
+.ucus-button{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 8px;
+}
+
+.ucus-button-selected{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 8px;
+	-fx-border-color: #397BDD;
+	-fx-border-width: 3px;
+	-fx-border-radius: 8px;
+}
+
+/* koltuklar togglebutton */
+.ucus-toggle{
+	-fx-font: 16px "Noto Sans";
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 8px;
+}
+
+.ucus-toggle:selected{
+	-fx-border-color: #397BDD;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+}
+
+.ucus-button:selected{
+	-fx-border-color: #397BDD;
+}
+
+/* Koltuk Seç Button */
+.choose-seat-button{
+	-fx-background-color: #1E3067;
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+/* Seçimi Sıfırla Button */
+.reset-selection{
+	-fx-background-color: #F75794;
+	
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+.custom-label{
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+}
+
+
+/*Custom ComboBox*/
+.custom-pay-combobox{
+	-fx-background-color: transparent;
+	-fx-border-color: #AECAF0;
+	-fx-border-width: 2px;
+	-fx-border-radius: 8px;
+	-fx-font: 14px "Noto Sans";
+	-fx-font-weight: bold;
+	-fx-text-fill: #a6abb7;
+}
+
+.custom-pay-combobox:focused {
+    -fx-border-color: #397BDD;
+	-fx-text-fill: black;
+}
+
+/* Bilet İptal Button */
+.cancel-ticket{
+	-fx-background-color: #F32424;
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+/* Login Button */ 
+.login-button{
+	-fx-background-color: #397bdd;
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+/* Yeni Hesap Oluştur Button */
+.new-account-button{
+	-fx-background-color: #AECAF0;
+	-fx-background-radius: 8px;
+	-fx-font-family: "Noto Sans";
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+
+
+
+
+
+
